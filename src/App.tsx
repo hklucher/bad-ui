@@ -8,6 +8,7 @@ import {
 import "./App.css";
 import AppContainer from "./components/layout/AppContainer";
 import NavBar from "./components/layout/NavBar";
+import PhoneShuffle from "./components/phone_shuffle/PhoneShuffle";
 
 const App: React.FC = () => {
   return (
@@ -17,11 +18,10 @@ const App: React.FC = () => {
 
         <Switch>
           <Route path="/shuffle_phone">
-            <div>Hello world</div>
+            <PhoneShuffle />
           </Route>
 
           <Route path="/">
-            <div>Goodbye world</div>
           </Route>
         </Switch>
       </AppContainer>
