@@ -1,0 +1,14 @@
+.nav-bar {
+  background-color: white;
+  box-shadow: 2px 2px 2px 0px #999;
+  padding: 24px;
+}
+
+.nav-bar__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-bar__list-item {
+  margin: 8px 0;
+}
