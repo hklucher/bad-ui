@@ -1,22 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Typography, List } from "@material-ui/core"
+
+import ListItemLink from "./ListItemLInk"
 
 import "./NavBar.css"
 
 function NavBar() {
   return (
     <nav className="nav-bar">
-      <ul className="nav-bar__list">
-        <li className="nav-bar__list-item">
-          <Link to="/">Home</Link>
-        </li>
+      <div className="nav-bar__header">
+        <Typography variant="h6">
+          Components
+        </Typography>
+      </div>
 
-        <li className="nav-bar__list-item">
-          <Link to="/shuffle_phone">
-            Shuffle Phone
-          </Link>
-        </li>
-      </ul>
+      <List>
+        <ListItemLink
+          to="/shuffle_phone"
+          label="Shuffle Phone"
+        />
+      </List>
     </nav>
   )
 }

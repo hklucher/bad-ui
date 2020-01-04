@@ -1,7 +1,11 @@
 .nav-bar {
   background-color: white;
-  box-shadow: 2px 2px 2px 0px #999;
-  padding: 24px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+.nav-bar__header {
+  padding: 4px 14px;
 }
 
 .nav-bar__list {
