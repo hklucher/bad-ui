@@ -7,12 +7,12 @@ import PhoneShuffleControls from "./PhoneShuffleControls";
 import PhoneShuffleForm from "./PhoneShuffleForm";
 import { getNextDigit } from "../../utils/phoneShuffleUtils";
 
-// TODO: Handle for final digit
-
 export enum ShufflingStatus {
   Running = "Running",
   Stopped = "Stopped"
 }
+
+const MAX_DIGITS_INDEX = 9
 
 function PhoneShuffle() {
   const intervalId = React.useRef<ReturnType<typeof setInterval> | null>(null);
@@ -67,17 +67,15 @@ function PhoneShuffle() {
       shufflingStatus === ShufflingStatus.Stopped &&
       intervalId.current
     ) {
-      // TODO: Clean up
       setPhoneNumberDigits({
         ...phoneNumberDigits,
         [shuffleIndex]: shuffleDigit,
       })
 
-      if (shuffleDigit !== null) {
+      if (shuffleDigit !== null && shuffleIndex < MAX_DIGITS_INDEX) {
         setShuffleIndex(shuffleIndex + 1)
+        setShuffleDigit(null)
       }
-
-      setShuffleDigit(null)
 
       clearInterval(intervalId.current);
     }
