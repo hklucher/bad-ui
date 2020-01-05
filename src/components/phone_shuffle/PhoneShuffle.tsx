@@ -2,9 +2,12 @@ import React, { useEffect } from "react";
 import { Card } from "@material-ui/core";
 
 import "./PhoneShuffle.css";
+import PhoneNumberSummary from "./PhoneNumberSummary";
 import PhoneShuffleControls from "./PhoneShuffleControls";
 import PhoneShuffleForm from "./PhoneShuffleForm";
 import { getNextDigit } from "../../utils/phoneShuffleUtils";
+
+// TODO: Handle for final digit
 
 export enum ShufflingStatus {
   Running = "Running",
@@ -84,6 +87,10 @@ function PhoneShuffle() {
   return (
     <div className="container">
       <Card variant="outlined" className="phone-shuffle__card">
+        <PhoneNumberSummary
+          digits={Object.values(phoneNumberDigits)}
+        />
+
         <PhoneShuffleForm
           phoneNumberDigits={phoneNumberDigits}
           shuffleDigit={shuffleDigit}
