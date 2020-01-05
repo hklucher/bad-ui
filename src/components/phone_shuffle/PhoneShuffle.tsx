@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Card } from "@material-ui/core";
+import { Card, Typography } from "@material-ui/core";
 
 import "./PhoneShuffle.css";
 import PhoneNumberSummary from "./PhoneNumberSummary";
@@ -85,6 +85,10 @@ function PhoneShuffle() {
   return (
     <div className="container">
       <Card variant="outlined" className="phone-shuffle__card">
+        <Typography variant="h6">
+          Please add your phone number
+        </Typography>
+
         <PhoneNumberSummary
           digits={Object.values(phoneNumberDigits)}
         />

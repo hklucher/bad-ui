@@ -19,4 +19,10 @@
 
 .phone-shuffle-input__active {
   border-color: #33c175;
+  border-width: 2px;
+}
+
+.phone-shuffle-input__complete {
+  border-bottom-width: 4px;
+  border-bottom-color:  #3b7bde;
 }
