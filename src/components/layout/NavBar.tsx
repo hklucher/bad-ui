@@ -19,6 +19,11 @@ function NavBar() {
           to="/shuffle_phone"
           label="Shuffle Phone"
         />
+
+        <ListItemLink
+          to="/scrabble_validator"
+          label="Scrabble Validator"
+        />
       </List>
     </nav>
   )
