@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.scrabble-validator__card {
+  padding: 24px;
+  min-width: 320px;
+}
+
+.scrabble-validator__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.scrabble-validator__text-field {
+  margin-top: 24px;
+}
+

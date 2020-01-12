@@ -9,6 +9,7 @@ import "./App.css";
 import AppContainer from "./components/layout/AppContainer";
 import NavBar from "./components/layout/NavBar";
 import PhoneShuffle from "./components/phone_shuffle/PhoneShuffle";
+import ScrabbleValidationForm from "./components/scrabble_validator/ScrabbleValidationForm";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,10 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/shuffle_phone">
             <PhoneShuffle />
+          </Route>
+
+          <Route path="/scrabble_validator">
+            <ScrabbleValidationForm />
           </Route>
 
           <Route path="/">
